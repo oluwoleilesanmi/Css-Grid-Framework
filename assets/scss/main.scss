@@ -1,0 +1,23 @@
+@import "reset";
+@import "variables";
+@import "grid";
+
+
+*{
+  box-sizing:border-box;
+}
+
+.sec-1{
+  .container{
+    background-color: $ash-gray;
+    display: flex;
+    justify-content: center;
+
+    .box{      
+      height: 200px;
+      width: 100%;
+      background-color:$duke-blue;
+      margin: 0 10px;
+    }
+  }
+}
