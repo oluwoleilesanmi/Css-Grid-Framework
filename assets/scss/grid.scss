@@ -1,3 +1,5 @@
+@import 'variables';
+
 .container-fluid{
   width: 100%;
   margin: 0 auto;
@@ -10,6 +12,7 @@
   max-width: $grid-max-width;
 }
 
+.container-fluid,
 .container:after,
 .row:after{
   content: "";
@@ -19,10 +22,14 @@
 
 [class*='col-']{
   float:left;
-  padding: 1em;
+  // padding: 1em;
   width: 100%;
   min-height: 1px;
   display:inline-block;
+}
+.row{
+  display: flex;
+  flex-wrap: wrap;
 }
 
 // media queries for responsive grid
@@ -31,7 +38,7 @@
  
   @for $i from 1 through $grid-columns{
     .col-sm-#{$i}{
-      width: (100% / $grid-columns) * $i;
+      width: 100% / $grid-columns * $i;
     }
   }
 
@@ -41,17 +48,17 @@
  
   @for $i from 1 through $grid-columns{
     .col-md-#{$i}{
-      width: (100% / $grid-columns) * $i;
+      width: 100% / $grid-columns * $i;
     }
   }
-  
+
 }
 
 @media #{$break-large}{
  
   @for $i from 1 through $grid-columns{
     .col-lg-#{$i}{
-      width: (100% / $grid-columns) * $i;
+      width: 100% / $grid-columns * $i;
     }
   }
   
@@ -62,7 +69,7 @@
  
   @for $i from 1 through $grid-columns{
     .col-xl-#{$i}{
-      width: (100% / $grid-columns) * $i;
+      width: 100% / $grid-columns * $i;
     }
   }
   
